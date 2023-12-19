@@ -14,6 +14,7 @@ import Cursor from "../components/Cursor.jsx";
 import Footer from "./Footer.jsx";
 import TimeLine from "./TimeLine.jsx";
 import axios from "axios";
+import Loder from "./Loder.jsx";
 const HeroSection = () => {
   const sectionInfoShow = window.innerWidth;
   const [loding, setLoding] = useState(false);
@@ -35,7 +36,7 @@ const HeroSection = () => {
   },[]);
 
   if(loding || dataitem == null) {
-    return <h1>data is loading </h1>
+    return <div className="loderContaner"><Loder/></div>
   }
 
   return (

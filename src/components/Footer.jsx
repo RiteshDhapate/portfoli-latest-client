@@ -31,7 +31,7 @@ const Footer = ({data}) => {
               Work
             </a>
 
-            <a href="#" className="footerNavLinks">
+            <a href="#About" className="footerNavLinks">
               Resume
             </a>
           </p>
