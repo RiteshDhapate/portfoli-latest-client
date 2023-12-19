@@ -23,7 +23,7 @@ const HeroSection = () => {
     const loadData = async() =>{
         try {
           setLoding(true)
-          const {data}= await axios.get("http://localhost:2000/api/data");
+          const {data}= await axios.get("https://portfoli-latest-server.vercel.app/api/data");
         setData(data);
         setLoding(false);
         } catch (error) {
