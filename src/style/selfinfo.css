@@ -1,0 +1,164 @@
+
+
+.selfInfoContaner {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .selfInfoCoverDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    /* padding: 0px 20%; */
+  }
+  .selfInformationdiv {
+    margin:0px 5rem;
+  }
+  .selfInformationdiv h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .selfInformationdiv p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    text-align: justify;
+  }
+  .selfInformationdiv p span {
+    color: #e73c7e;
+  }
+  .selfInfo .infoData {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin: 10px 0px;
+  }
+  .firstInfoDiv {
+    width: 50%;
+  }
+  .secoundInfoDiv {
+    width: 50%;
+  }
+  .firstInfoDiv b,
+  .secoundInfoDiv b {
+    font-size: 1.1rem;
+  }
+  .firstInfoDiv b span,
+  .secoundInfoDiv b span {
+    color: #e73c7e;
+  }
+  .firstInfoDiv span,
+  .secoundInfoDiv span {
+    font-size: 1rem;
+  }
+  .selfInformationdiv a button {
+    text-decoration: none;
+    color: #fff;
+  }
+  .selfInformationdiv button {
+    width: fit-content;
+    height: 2.4rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 5px;
+    font-weight: bolder;
+    border-radius: 0.3rem;
+    margin-left: 20px;
+    cursor: pointer;
+    background: -o-linear-gradient(135deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 5s ease infinite;
+    animation: gradient 5s ease infinite;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+    -webkit-box-shadow: 2px 5px 15px 0px rgb(54, 39, 39);
+    box-shadow: 2px 5px 15px 0px rgb(54, 39, 39);
+  }
+  .selfInformationdiv button:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  .photo {
+    width: 600px;
+    height: 400px;
+    z-index: 90;
+    margin-left: 30px;
+  }
+ 
+  .photo img {
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  
+  /* ************************************************* */
+  /* 481 to 768 media query  large mobile and small tablet*/
+  /* ************************************************** */
+  @media only screen and (max-width: 768px) and (min-width: 481px) {
+    .selfInfo {
+      width: 100%;
+    }
+    .selfInformationdiv {
+      margin-left: 0px;
+    }
+    .selfInfoCoverDiv {
+      padding: 0px 5%;
+    }
+    .firstInfoDiv b,
+    .secoundInfoDiv b {
+      font-size: 0.9rem;
+    }
+    .firstInfoDiv span,
+    .secoundInfoDiv span {
+      font-size: 0.7rem;
+    }
+    .selfInformationdiv h1 {
+      font-size: 1.5rem;
+    }
+  }
+  /* ************************************************* */
+  /* 0 to 480 media query  large mobile and small tablet*/
+  /* ************************************************** */
+  @media only screen and (max-width: 480px) and (min-width: 0px) {
+    .selfInformationdiv {
+      margin-left: 0px;
+    }
+    .selfInfoCoverDiv {
+      padding: 0px 5%;
+    }
+    .selfInfo {
+      width: 100%;
+    }
+    .firstInfoDiv b,
+    .secoundInfoDiv b {
+      font-size: 0.9rem;
+    }
+    .firstInfoDiv span,
+    .secoundInfoDiv span {
+      font-size: 0.7rem;
+    }
+    .selfInformationdiv h1 {
+      font-size: 1rem;
+    }
+    .selfInfoContaner {
+        flex-direction: column;
+      }
+      .photo {
+        width: 300px;
+        height: 300px;
+      }
+  }
+  

@@ -1,0 +1,100 @@
+.main-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #12101d;
+    padding: 100px 15px;
+    font-family: "Poppins", sans-serif; 
+    }
+    .timeline-container {
+    position: relative;
+    max-width: 100%;
+    }
+    
+    .timeline-container h1{
+        text-align: center;
+        color: #03d7fd;
+        padding: 20px 0px;
+        font-family: 'Nosifer', sans-serif;
+    }
+    .timeline-container .box {
+    margin: 40px;
+    color: #f4fcfe;
+    position: relative;
+    }
+    .box:nth-child(odd) {
+    padding-left: 500px;
+    text-align: left;
+    }
+    .box:nth-child(even) {
+    padding-right: 500px;
+    text-align: right;
+    }
+    .box:last-child {
+    margin-bottom: 0px;
+    }
+    .points {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fd0356;
+    position: absolute;
+    left: 442px;
+    bottom: 133px;
+    z-index: 1;
+    }
+    .year {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fd0356;
+    margin-bottom: 15px;
+    }
+    .content {
+    padding: 20px;
+    background-color: #3c3541;
+    width: 400px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 20px #00000088;
+    }
+    .content h3 {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    }
+    .content p {
+    font-size: 14px;
+    color: rgb(209, 220, 230);
+    }
+    /* Responsive Design */
+    @media screen and (max-width: 980px) {
+    .timeline-container::after {
+    left: 20px;
+    }
+    .points {
+    left: -26px;
+    }
+    .box:nth-child(odd) {
+    padding-left: 0px;
+    }
+    .box:nth-child(even) {
+    padding-right: 0px;
+    text-align: left;
+    }
+    }
+    @media screen and (max-width: 640px) {
+    .timeline-container::after {
+    height: 1635px;
+    }
+    .points {
+    bottom: 168px;
+    }
+    .content {
+    width: 250px;
+    }
+    }
+    

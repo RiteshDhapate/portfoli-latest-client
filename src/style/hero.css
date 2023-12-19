@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Young+Serif&display=swap');
+
+
+.herocontent {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1em;
+}
+
+.heroimage {
+    width: 50%;
+}
+
+.heroimage img {
+    margin-top: 3rem;
+    margin-left: 4rem;
+    height: 30rem;
+}
+
+.heroinfo {
+    width: 50%;
+    color: white;
+}
+
+.heroinfo h1 {
+    margin-top: 5rem;
+    font-size: 2.7em;
+    font-family: 'Young Serif', serif;
+}
+
+.heroinfo p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    font-family: 'Young Serif', serif;
+}
+
+.socialMedaIcons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.socialMedaIcons a .icons {
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.socialMedaIcons .icons:hover {
+    background-color: white;
+    color: black;
+}
+
+.btnOfHireMe button {
+    margin: 1rem;
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 2em;
+    font-family: 'Young Serif', serif;
+    -webkit-transition: all ease-in-out 0.2s;
+    -o-transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
+}
+
+.btnOfHireMe button:hover {
+    background-color: #ffffffb2;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-box-shadow: 2px 2px 7px rgb(19, 143, 157);
+            box-shadow: 2px 2px 7px rgb(19, 143, 157);
+    cursor: pointer;
+}
+
+.typewriter {
+    color: #c45f5f;
+}
+
+
+/* ************************************************* */
+/* 769 to 1279 media query  tablet*/
+/* ************************************************** */
+
+@media only screen and (max-width: 1279px) and (min-width: 931px) {
+    .heroimage img {
+        margin-top: 7rem;
+        margin-left: 1rem;
+        height: 20rem;
+    }
+
+    .heroinfo h1 {
+        margin-top: 0rem;
+        font-size: 2.3em;
+    }
+
+    .heroinfo p {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        font-size: 1rem;
+    }
+}
+
+
+/* ************************************************* */
+/* 481 to 768 media query  large mobile and small tablet*/
+/* ************************************************** */
+@media only screen and (max-width: 930px) and (min-width: 481px) {
+    .heroimage {
+        display: none;
+    }
+    .herocontent{
+        padding: 0rem;
+    }
+    .heroinfo h1 {
+        margin-top: 1rem;
+        font-size: 2.2em;
+    }
+
+    .heroinfo {
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .heroinfo p {
+        font-size: 1.3rem;
+    }
+}
+
+/* ************************************************* */
+/* 0 to 480 media query  large mobile and small tablet*/
+/* ************************************************** */
+@media only screen and (max-width: 480px) and (min-width: 0px) {
+    .heroimage {
+        display: none;
+    }
+
+    .heroinfo h1 {
+        margin-top: 0rem;
+        margin-top: 0.6rem;
+        font-size: 2.1em;
+    }
+
+    .heroinfo {
+        padding: 0rem;
+        width: 100%;
+    }
+
+    .heroinfo p {
+        margin-top: 20px;
+        font-size: 1.1rem;
+    }
+}
