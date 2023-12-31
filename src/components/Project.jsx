@@ -2,7 +2,7 @@ import { useRef } from "react";
 import "../style/Project.css";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import {useNavigate} from "react-router-dom";
-const Single = ({ item }) => {
+const Single = ({ item,data }) => {
   const ref = useRef();
   const navigate = useNavigate();
   const { scrollYProgress } = useScroll({
@@ -19,13 +19,13 @@ const Single = ({ item }) => {
           <div className="imageContainer" ref={ref}>
             <img src={item.img} alt="" />
           </div>
-          <motion.div className="textContainer" style={{ y }}>
+          <motion.div className="textContainer" >
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <div>
               <a href={item.demoUrl}><button>See Demo</button></a>
               <a href={item.githubUrl}><button>GitHub</button></a>
-              <button onClick={()=>navigate(`/info/${item.id}`)}>more Info</button>
+              <button onClick={()=>navigate(`/info/${item.id}`,{state:{data:data}})}>more Info</button>
             </div>
           </motion.div>
         </div>
@@ -56,7 +56,7 @@ const Portfolio = ({data}) => {
       </div>
       <div className="projects">
         {items.map((item) => (
-          <Single item={item} key={item.id} />
+          <Single item={item} data={data} key={item.id} />
         ))}
       </div>
     </div>

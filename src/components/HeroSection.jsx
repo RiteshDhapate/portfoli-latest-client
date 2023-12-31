@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import Img1 from "../images/wave-top.png";
 import Img2 from "../images/wave-mid.png";
 import Img3 from "../images/wave-bot.png";
@@ -13,32 +13,16 @@ import Sidebar from "./Sidebar.jsx";
 import Cursor from "../components/Cursor.jsx";
 import Footer from "./Footer.jsx";
 import TimeLine from "./TimeLine.jsx";
-import axios from "axios";
+import {Context} from "../App.js";
 import Loder from "./Loder.jsx";
 const HeroSection = () => {
   const sectionInfoShow = window.innerWidth;
-  const [loding, setLoding] = useState(false);
-  const [dataitem,setData] = useState(null);
-  
-  useEffect(()=>{
-    const loadData = async() =>{
-        try {
-          setLoding(true)
-          const {data}= await axios.get("https://portfoli-latest-server.vercel.app/api/data");
-        setData(data);
-        setLoding(false);
-        } catch (error) {
-          alert("error loading data");
-          console.error(error);
-        }
-    }
-    loadData();
-  },[]);
-
-  if(loding || dataitem == null) {
-    return <div className="loderContaner"><Loder/></div>
+  const dataitem = useContext(Context);
+  if(dataitem===null){
+    return <div className="loderContaner">
+      <Loder/>
+    </div>
   }
-
   return (
     <div>
       {/* ********************************************* */}
